@@ -1,6 +1,6 @@
- orbs:
+orbs:
   aws-eks: circleci/aws-eks@1.1.0
-  aws-ecr: circleci/aws-ecr@7.0.0
+  aws-ecr: ci
   aws-cli: circleci/aws-cli@2.0.0
   node: circleci/node@2.0.2
 
@@ -20,12 +20,12 @@ workflows:
           account-url: AWS_ECR_URL_DEV
           aws-access-key-id: AWS_DEV_ACCESS_KEY
           aws-secret-access-key: AWS_DEV_SECRET_KEY
-          # context: myContext
+          #### context: myContext
           create-repo: true
           dockerfile: Env/Dev/Dockerfile
           no-output-timeout: 20m
           path: .
-          # profile-name: myProfileName
+          #### profile-name: myProfileName
           region: AWS_REGION
           repo: demo
           skip-when-tags-exist: false
@@ -39,3 +39,4 @@ workflows:
           filters:
             branches:
               only: circleci-project-setup
+              #only: circleci-project-setup

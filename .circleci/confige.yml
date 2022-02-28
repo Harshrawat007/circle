@@ -11,7 +11,7 @@ jobs:
     steps:
       - run:
           name: deploy-Dev.
-          command: ssh ec2-user@174.129.71.215 './node-backend-ssh.sh';
+          #command: ssh ec2-user@174.129.71.215 './node-backend-ssh.sh';
 version: 2.1
 workflows:
   build_and_deploy:
